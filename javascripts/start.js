@@ -12,6 +12,11 @@
         "direction": "next"
     });
 
+    $("#carouselTicker-grid-3").carouselTicker({
+        "mode": "horizontal",
+        "bandWidth": 3
+    });
+
     $(".carouselTicker-start").carouselTicker({
         "direction": "next"
     });

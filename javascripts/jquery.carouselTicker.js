@@ -11,6 +11,7 @@
  * - speed: integer
  * - delay: integer
  * - direction: string - "prev", "next"
+ * - bandWidth: integer - how much multiple row (horizontal) or columns (vertical mode) will be calculated & shown
  */
 
 "use strict";
@@ -26,6 +27,7 @@
         mode: "horizontal",
         speed: 1,
         delay: 30,
+        bandWidth: 1,
 
         // CALLBACKS
         onCarouselTickerLoad: function() {}
@@ -224,6 +226,7 @@
                 if($this.hasClass(ticker.cloneCls)) return;
                     ticker.itemsWidth += this.getBoundingClientRect().width + margin;
             });
+            ticker.itemsWidth /= ticker.settings.bandWidth;
         };
 
         /**
@@ -239,6 +242,7 @@
                 if($this.hasClass(ticker.cloneCls)) return;
                     ticker.itemsHeight += $this.outerHeight(true);
             });
+            ticker.itemsHeight /= ticker.settings.bandWidth;
         };
 
         /**

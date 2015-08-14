@@ -13,7 +13,16 @@
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-
+		<style type="text/css">
+			.carouselTicker__clone { background: #ce5; }
+			#carouselTicker-grid-3 ul {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				height: 230px;
+			}
+			
+		</style>
         <title>carouselTicker</title>
     </head>
 
@@ -121,6 +130,48 @@
                                 <li class="carouselTicker__item">15</li>
                             </ul>
                         </div>
+                    </div>
+                    
+                    <br><br>
+                    <h4>Multiple items at glance</h4>
+                    <div style="width: 400px; height: 230px; margin: 0 auto; overflow:hidden;">
+                        <div id="carouselTicker-grid-3" class="carouselTicker Nflow">
+                            <ul class="carouselTicker__list">
+                                <li class="carouselTicker__item">1</li>
+                                <li class="carouselTicker__item">2</li>
+                                <li class="carouselTicker__item">3</li>
+                                <li class="carouselTicker__item">4</li>
+                                <li class="carouselTicker__item">5</li>
+                                <li class="carouselTicker__item">6</li>
+                                <li class="carouselTicker__item">7</li>
+                                <li class="carouselTicker__item">8</li>
+                                <li class="carouselTicker__item">9</li>
+                                <li class="carouselTicker__item">10</li>
+                                <li class="carouselTicker__item">11</li>
+                                <li class="carouselTicker__item">12</li>
+                                <li class="carouselTicker__item">13</li>
+                                <li class="carouselTicker__item">14</li>
+                                <li class="carouselTicker__item">15</li>
+                                <li class="carouselTicker__item">16</li>
+                                <li class="carouselTicker__item">17</li>
+                                <li class="carouselTicker__item">18</li>
+                                <!--li class="carouselTicker__item">19</li>
+                                <li class="carouselTicker__item">20</li>
+                            
+                                <li class="carouselTicker__item">21</li>
+                                <li class="carouselTicker__item">22</li>
+                                <li class="carouselTicker__item">23</li>
+                                <li class="carouselTicker__item">24</li>
+                                <li class="carouselTicker__item">25</li>
+                                <li class="carouselTicker__item">26</li>
+                                <li class="carouselTicker__item">27</li>
+                                <li class="carouselTicker__item">28</li>
+                                <li class="carouselTicker__item">29</li>
+                                <li class="carouselTicker__item">30</li-->
+                            </ul>
+                        </div>
+
+                       
                     </div>
                     
                     <br><br>
@@ -272,6 +323,11 @@
                             <td>This is parameter determines speed the carouselTicker. <strong>Default: 30</strong></td>
                         </tr>
                         <tr>
+                            <td>bandWidth</td>
+                            <td>integer</td>
+                            <td>This is parameter determines how much items (rows at horizontal mode or columns in vertical mode) will be shown the carouselTicker. <strong>Default: 1</strong></td>
+                        </tr>
+                        <tr>
                             <td>reverse</td>
                             <td>boolean</td>
                             <td>Determines direction carouselTicker. <strong>Default: false</strong></td>
@@ -344,7 +400,7 @@ $</span><span class="pun">(...).</span><span class="pln">carouselTicker().run();
         </p>
     </footer>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.carouselTicker.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.carouselTicker.js"></script>
     <script type="text/javascript" src="javascripts/start.js"></script>
   </body>
 </html>
