@@ -124,6 +124,8 @@
                     // set common parameters
                     setupFunc();
                 }
+				else
+					ticker.settings.onCarouselTickerItemsShown();
             // if vertical mode
             } else if(ticker.settings.mode === "vertical") {
                 // determine summ items height
@@ -136,6 +138,8 @@
                     // set common parameters
                     setupFunc();
                 }
+				else
+					ticker.settings.onCarouselTickerItemsShown();
             }
 
             if(ticker.isInitialize) {
