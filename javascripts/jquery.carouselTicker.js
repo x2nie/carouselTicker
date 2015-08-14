@@ -30,7 +30,8 @@
         bandWidth: 1,
 
         // CALLBACKS
-        onCarouselTickerLoad: function() {}
+        onCarouselTickerLoad: function() {},
+        onCarouselTickerItemsShown: function() {}
     };
 
     $.fn.carouselTicker = function(options) {
@@ -201,12 +202,14 @@
             if(ticker.settings.direction === "prev") {
                 if(Math.abs(parseInt(ticker.$list.css(mode))) >= itemsSize) {
                     ticker.$list.css(mode, 0);
+					ticker.settings.onCarouselTickerItemsShown();
                 }
             }
 
             if(ticker.settings.direction === "next") {
                 if(parseInt(ticker.$list.css(mode)) >= 0) {
                     ticker.$list.css(mode, -itemsSize + "px");
+					ticker.settings.onCarouselTickerItemsShown();
                 }
             }
         };

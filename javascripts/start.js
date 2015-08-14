@@ -19,7 +19,8 @@
 
     $("#carouselTicker-grid-3v").carouselTicker({
         "mode": "vertical",
-        "bandWidth": 3
+        "bandWidth": 3,
+		"onCarouselTickerItemsShown": function() {console.log("All items has been Shown")}
     });
 
     $(".carouselTicker-start").carouselTicker({
