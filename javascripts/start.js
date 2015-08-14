@@ -17,6 +17,11 @@
         "bandWidth": 3
     });
 
+    $("#carouselTicker-grid-3v").carouselTicker({
+        "mode": "vertical",
+        "bandWidth": 3
+    });
+
     $(".carouselTicker-start").carouselTicker({
         "direction": "next"
     });
